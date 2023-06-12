@@ -8,7 +8,7 @@ const tokenDecode = (req) => {
     if (bearer) {
       const token = bearer.split(" ")[1];
 
-      return jwt.verify(token, process.env.TOKEN_SECRET);
+      return jwt.verify(token, 'WHITERABBIT');
     }
 
     return false;
